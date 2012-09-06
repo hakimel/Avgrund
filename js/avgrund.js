@@ -5,10 +5,10 @@
  *
  * Copyright (C) 2012 Hakim El Hattab, http://hakim.se
  */
-(function(){
+var Avgrund = (function(){
 
 	var container = document.documentElement,
-		popup = document.querySelector( '.avgrund-popup' ),
+		popup = document.querySelector( '.avgrund-popup-animate' ),
 		cover = document.querySelector( '.avgrund-cover' ),
 		currentState = null;
 
@@ -49,6 +49,7 @@
 		document.removeEventListener( 'click', onDocumentClick, false );
 
 		removeClass( container, 'avgrund-active' );
+		removeClass( popup, 'avgrund-popup-animate')
 	}
 
 	function disableBlur() {
@@ -63,10 +64,22 @@
 		element.className = element.className.replace( name, '' );
 	}
 
-	window.avgrund = {
+	function show(selector){
+		popup = document.querySelector( selector );
+		addClass(popup, 'avgrund-popup-animate');
+		activate();
+		return this;
+	}
+	function hide() {
+		deactivate();
+	}
+
+	return {
 		activate: activate,
 		deactivate: deactivate,
-		disableBlur: disableBlur
+		disableBlur: disableBlur,
+		show: show,
+		hide: hide
 	}
 
 })();
