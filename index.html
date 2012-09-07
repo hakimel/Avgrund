@@ -13,18 +13,52 @@
 		
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		
-		<link rel="stylesheet" href="css/avgrund.css?2">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/avgrund.css">
+
+		<script>
+			function showDialog() {
+				Avgrund.show("#custom-popup");
+			}
+			function stackIt() {
+				Avgrund.show("#default-popup");
+			}
+			function growIt() {
+				Avgrund.show("#default-popup");
+			}
+			function closeDialog() {
+				Avgrund.hide();
+			}
+		</script>
+
 	</head>
 	
 	<body>
+
+		<aside id="default-popup" class="avgrund-popup">
+			<h2>That's all, folks</h2>
+			<p>
+				You can hit ESC or click outside to close the modal. Give it a go to see the reverse transition.
+			</p>
+			<p>
+				If you like this you would probably enjoy <a href="http://lab.hakim.se/meny">Meny</a>, <a href="http://lab.hakim.se/reveal-js">reveal.js</a> and <a href="http://lab.hakim.se/scroll-effects">stroll.js</a>.
+			</p>
+			<button onclick="javascript:closeDialog();">Close</button>
+		</aside>
+
+		<div id="custom-popup" class="avgrund-popup">
+			<p>Custom popup content</p>
+			<a href="#" id="custom-popup-close">close</a>
+		</div>
 
 		<article class="avgrund-contents">
 			<h1>Avgrund</h1>
 			<p>
 				A modal concept which aims to give a sense of depth between the page and modal layers. Click a button below to give it a try.
 			</p>
-			<button onclick="avgrund.activate( 'stack' );">Stack it</button>
-			<button onclick="avgrund.activate();">Grow it</button>
+			<button onclick="javascript:stackIt();">Stack it</button>
+			<button onclick="javascript:growIt();">Grow it</button>
+			<button onclick="javascript:showDialog();">Other dialog</button>
 			<p>
 				Uses CSS transforms to scale components and CSS filters to blur the page. Built for the fun of 
 				it, not intended for any practical use.
@@ -44,17 +78,6 @@
 		</article>
 
 		<div class="avgrund-cover"></div>
-
-		<aside class="avgrund-popup">
-			<h2>That's all, folks</h2>
-			<p>
-				You can hit ESC or click outside to close the modal. Give it a go to see the reverse transition.
-			</p>
-			<p>
-				If you like this you would probably enjoy <a href="http://lab.hakim.se/meny">Meny</a>, <a href="http://lab.hakim.se/reveal-js">reveal.js</a> and <a href="http://lab.hakim.se/scroll-effects">stroll.js</a>.
-			</p>
-			<button onclick="avgrund.deactivate();">Close</button>
-		</aside>
 
 		<script type="text/javascript" src="js/avgrund.js"></script>
 
