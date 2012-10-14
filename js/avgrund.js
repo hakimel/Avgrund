@@ -31,6 +31,7 @@ var Avgrund = (function(){
 	function activate( state ) {
 		document.addEventListener( 'keyup', onDocumentKeyUp, false );
 		document.addEventListener( 'click', onDocumentClick, false );
+		document.addEventListener( 'touchstart', onDocumentClick, false );
 
 		removeClass( popup, currentState );
 		addClass( popup, 'no-transition' );
@@ -47,6 +48,7 @@ var Avgrund = (function(){
 	function deactivate() {
 		document.removeEventListener( 'keyup', onDocumentKeyUp, false );
 		document.removeEventListener( 'click', onDocumentClick, false );
+		document.removeEventListener( 'touchstart', onDocumentClick, false );
 
 		removeClass( container, 'avgrund-active' );
 		removeClass( popup, 'avgrund-popup-animate')
