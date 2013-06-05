@@ -6,6 +6,9 @@ A modal concept which aims to give a sense of depth between the page and modal l
 
 ## History
 
+#### 0.1.1
+- Webkit CSS3 transition flickering bugfix
+
 #### 0.1
 - Initial release
 
