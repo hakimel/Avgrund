@@ -4,11 +4,6 @@ A modal concept which aims to give a sense of depth between the page and modal l
 
 [Check out the demo page](http://lab.hakim.se/avgrund/).
 
-## History
-
-#### 0.1
-- Initial release
-
 ## License
 
 MIT licensed
