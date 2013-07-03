@@ -1,0 +1,88 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Avgrund - A modal UI concept</title>
+
+		<meta name="description" content="A modal concept which aims to give a sense of depth between the page and modal layers">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="viewport" content="width=800, user-scalable=no">
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/avgrund.css">
+
+		<script>
+			function openDialog() {
+				Avgrund.show( "#default-popup" );
+			}
+			function openSecondDialog() {
+				Avgrund.show( "#second-popup" );
+			}
+			function closeDialog() {
+				Avgrund.hide();
+			}
+		</script>
+
+	</head>
+	
+	<body>
+
+		<aside id="default-popup" class="avgrund-popup">
+			<h2>That's all, folks</h2>
+			<p>
+				You can hit ESC or click outside to close the modal. Give it a go to see the reverse transition.
+			</p>
+			<p>
+				If you like this you would probably enjoy <a href="http://lab.hakim.se/meny">Meny</a>, <a href="http://lab.hakim.se/reveal-js">reveal.js</a> and <a href="http://lab.hakim.se/scroll-effects">stroll.js</a>.
+			</p>
+			<button onclick="javascript:closeDialog();">Close</button>
+		</aside>
+
+		<aside id="second-popup" class="avgrund-popup">
+			<h2>That's a completely different popup</h2>
+			<p>
+				You can hit ESC or click outside to close the modal. Give it a go to see the reverse transition.
+			</p>
+			<button onclick="javascript:closeDialog();">Close</button>
+		</aside>
+
+		<article class="avgrund-contents">
+			<h1>Avgrund</h1>
+			<p>
+				A modal concept which aims to give a sense of depth between the page and modal layers. Click the button below to give it a try.
+			</p>
+			<button onclick="javascript:openDialog();">Open Avgrund</button>
+			<button onclick="javascript:openSecondDialog();">Open Second Avgrund</button>
+			<p>
+				Uses CSS transforms to scale components and CSS filters to blur the page. Built for the fun of 
+				it, not intended for any practical use.
+			</p>
+			<p>
+				<em>Avgrund</em> is Swedish for abyss.
+			</p>
+			<small>
+				Created by <a href="http://twitter.com/hakimel">@hakimel</a> / <a href="http://hakim.se/">http://hakim.se</a>
+			</small>
+
+			<div class="sharing">
+				<a href="http://twitter.com/share" class="twitter-share-button" data-text="Avgrund - a depth-based modal concept from @hakimel" data-url="http://lab.hakim.se/avgrund" data-count="small" data-related="hakimel"></a>
+				
+				<iframe id="facebook-button" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flab.hakim.se%2Favgrund%2F&layout=button_count&show_faces=false&width=83&action=like&font=arial&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:24px; position: relative; top: 4px;" allowTransparency="true"></iframe> 
+			</div>
+		</article>
+
+		<div class="avgrund-cover"></div>
+
+		<script type="text/javascript" src="js/avgrund.js"></script>
+
+		<a class="fork-reveal" href="https://github.com/hakimel/avgrund"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/camo.github.com/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+	</body>
+</html>
