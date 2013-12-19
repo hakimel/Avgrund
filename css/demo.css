@@ -1,9 +1,6 @@
 /*!
- * avgrund 0.1
- * http://lab.hakim.se/avgrund
- * MIT licensed
- *
- * Created by Hakim El Hattab, http://hakim.se
+ * Styles intended only for this demo page. If you want to
+ * try and use Avgrund in your project, don't include these.
  */
 
 * {
@@ -11,7 +8,7 @@
 	padding: 0;
 }
 
-html, 
+html,
 body {
 	height: 100%;
 	overflow: hidden;
@@ -23,7 +20,7 @@ html {
 	background-repeat: repeat;
 }
 
-h1, 
+h1,
 h2 {
 	font-size: 24px;
 }
@@ -69,6 +66,8 @@ button {
 	color: #fff;
 	background: #7aa76d;
 	font-size: 15px;
+
+	outline: none;
 
 	-webkit-transition: 0.15s background ease;
 	   -moz-transition: 0.15s background ease;
