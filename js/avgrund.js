@@ -33,6 +33,12 @@ var Avgrund = (function(){
 		document.addEventListener( 'click', onDocumentClick, false );
 		document.addEventListener( 'touchstart', onDocumentClick, false );
 
+		/**
+		 * The 'overflow' property needs to be added dynamically, 
+		 * otherwise it can interfere with the project desenvlvimento.
+		 */
+		document.querySelector('body').style.overflow = 'hidden';
+
 		removeClass( popup, currentState );
 		addClass( popup, 'no-transition' );
 		addClass( popup, state );
@@ -49,6 +55,11 @@ var Avgrund = (function(){
 		document.removeEventListener( 'keyup', onDocumentKeyUp, false );
 		document.removeEventListener( 'click', onDocumentClick, false );
 		document.removeEventListener( 'touchstart', onDocumentClick, false );
+
+		/**
+		 * Remove value 'hidden'
+		 */
+		document.querySelector('body').style.overflow = 'inherit';
 
 		removeClass( container, 'avgrund-active' );
 		removeClass( popup, 'avgrund-popup-animate')
