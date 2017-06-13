@@ -8,11 +8,10 @@
 var Avgrund = (function(){
 
 	var container = document.documentElement,
-		popup = document.querySelector( '.avgrund-popup-animate' ),
+		popup = document.querySelector('.avgrund-popup-animate'),
 		cover = document.querySelector( '.avgrund-cover' ),
 		currentState = null;
-
-	container.className = container.className.replace( /\s+$/gi, '' ) + ' avgrund-ready';
+	container.classList.add('avgrund-ready');
 
 	// Deactivate on ESC
 	function onDocumentKeyUp( event ) {
@@ -33,13 +32,14 @@ var Avgrund = (function(){
 		document.addEventListener( 'click', onDocumentClick, false );
 		document.addEventListener( 'touchstart', onDocumentClick, false );
 
-		removeClass( popup, currentState );
-		addClass( popup, 'no-transition' );
-		addClass( popup, state );
+		popup.classList.remove(currentState);
+		popup.classList.add('no-transition');
+		if(state)
+			popup.classList.add(state);
 
 		setTimeout( function() {
-			removeClass( popup, 'no-transition' );
-			addClass( container, 'avgrund-active' );
+			popup.classList.remove('no-transition');
+			container.classList.add('avgrund-active');
 		}, 0 );
 
 		currentState = state;
@@ -50,25 +50,17 @@ var Avgrund = (function(){
 		document.removeEventListener( 'click', onDocumentClick, false );
 		document.removeEventListener( 'touchstart', onDocumentClick, false );
 
-		removeClass( container, 'avgrund-active' );
-		removeClass( popup, 'avgrund-popup-animate')
+		container.classList.remove('avgrund-active');
+		popup.classList.remove('avgrund-popup-animate');
 	}
 
 	function disableBlur() {
-		addClass( document.documentElement, 'no-blur' );
-	}
-
-	function addClass( element, name ) {
-		element.className = element.className.replace( /\s+$/gi, '' ) + ' ' + name;
-	}
-
-	function removeClass( element, name ) {
-		element.className = element.className.replace( name, '' );
+		document.documentElement.classList.add('no-blur');
 	}
 
 	function show(selector){
 		popup = document.querySelector( selector );
-		addClass(popup, 'avgrund-popup-animate');
+		popup.classList.add('avgrund-popup-animate');
 		activate();
 		return this;
 	}
