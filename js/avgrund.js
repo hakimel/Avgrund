@@ -9,46 +9,46 @@ var Avgrund = (function(){
 
 	var container = document.documentElement,
 		popup = document.querySelector('.avgrund-popup-animate'),
-		cover = document.querySelector( '.avgrund-cover' ),
+		cover = document.querySelector('.avgrund-cover'),
 		currentState = null;
 	container.classList.add('avgrund-ready');
 
 	// Deactivate on ESC
-	function onDocumentKeyUp( event ) {
-		if( event.keyCode === 27 ) {
+	function onDocumentKeyUp(event) {
+		if(event.keyCode === 27) {
 			deactivate();
 		}
 	}
 
 	// Deactivate on click outside
-	function onDocumentClick( event ) {
-		if( event.target === cover ) {
+	function onDocumentClick(event) {
+		if(event.target === cover) {
 			deactivate();
 		}
 	}
 
-	function activate( state ) {
-		document.addEventListener( 'keyup', onDocumentKeyUp, false );
-		document.addEventListener( 'click', onDocumentClick, false );
-		document.addEventListener( 'touchstart', onDocumentClick, false );
+	function activate(state) {
+		document.addEventListener('keyup', onDocumentKeyUp, false);
+		document.addEventListener('click', onDocumentClick, false);
+		document.addEventListener('touchstart', onDocumentClick, false);
 
 		popup.classList.remove(currentState);
 		popup.classList.add('no-transition');
 		if(state)
 			popup.classList.add(state);
 
-		setTimeout( function() {
+		setTimeout(function() {
 			popup.classList.remove('no-transition');
 			container.classList.add('avgrund-active');
-		}, 0 );
+		}, 0);
 
 		currentState = state;
 	}
 
 	function deactivate() {
-		document.removeEventListener( 'keyup', onDocumentKeyUp, false );
-		document.removeEventListener( 'click', onDocumentClick, false );
-		document.removeEventListener( 'touchstart', onDocumentClick, false );
+		document.removeEventListener('keyup', onDocumentKeyUp, false);
+		document.removeEventListener('click', onDocumentClick, false);
+		document.removeEventListener('touchstart', onDocumentClick, false);
 
 		container.classList.remove('avgrund-active');
 		popup.classList.remove('avgrund-popup-animate');
@@ -59,7 +59,7 @@ var Avgrund = (function(){
 	}
 
 	function show(selector){
-		popup = document.querySelector( selector );
+		popup = document.querySelector(selector);
 		popup.classList.add('avgrund-popup-animate');
 		activate();
 		return this;
