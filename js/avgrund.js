@@ -63,7 +63,7 @@ var Avgrund = (function(){
 	}
 
 	function removeClass( element, name ) {
-		element.className = element.className.replace( name, '' );
+		element.className = element.className.replace(' ' + name, '' );
 	}
 
 	function show(selector){
