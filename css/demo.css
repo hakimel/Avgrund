@@ -26,13 +26,13 @@ h2 {
 }
 
 p {
-	margin: 10px 0 10px 0;
-	font-size: 16px;
-	line-height: 1.32;
+	margin: 20px 0 20px 0;
+	font-size: 18px;
+	line-height: 1.4;
 }
 
 a {
-	color: #7aa76d;
+	color: #2faeff;
 	text-decoration: none;
 
 	-webkit-transition: 0.15s color ease;
@@ -42,30 +42,31 @@ a {
 	        transition: 0.15s color ease;
 }
 	a:hover {
-		color: #91cd85;
+		color: #68c4ff;
 	}
 
 small {
 	display: block;
-	margin-top: 15px;
-	padding-top: 15px;
+	margin-top: 25px;
+	padding-top: 25px;
 	color: #333;
-	font-size: 0.85em;
-	border-top: 1px dashed #ccc;
+	font-size: 16px;
+	line-height: 1.4;
+	border-top: 1px solid #ddd;
 
 	-webkit-text-size-adjust: none;
 }
 
 button {
 	border: 0px;
-	padding: 8px 10px;
+	padding: 10px 14px;
 	margin: 5px 0px;
-	border-radius: 1px;
+	border-radius: 2px;
 
 	cursor: pointer;
 	color: #fff;
-	background: #7aa76d;
-	font-size: 15px;
+	background: #2faeff;
+	font-size: 18px;
 
 	outline: none;
 
@@ -76,10 +77,10 @@ button {
 	        transition: 0.15s background ease;
 }
 	button:hover {
-		background: #91cd85;
+		background: #68c4ff;
 	}
 	button:active {
-		background: #60895a;
+		background: #18a5ff;
 	}
 	button+button {
 		margin-left: 5px;

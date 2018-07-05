@@ -8,4 +8,4 @@ A modal concept which aims to give a sense of depth between the page and modal l
 
 MIT licensed
 
-Copyright (C) 2017 Hakim El Hattab, http://hakim.se
+Copyright (C) 2018 Hakim El Hattab, http://hakim.se

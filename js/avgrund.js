@@ -3,7 +3,7 @@
  * http://lab.hakim.se/avgrund
  * MIT licensed
  *
- * Copyright (C) 2017 Hakim El Hattab, http://hakim.se
+ * Copyright (C) 2018 Hakim El Hattab, http://hakim.se
  */
 var Avgrund = (function(){
 
