@@ -86,11 +86,11 @@ var Avgrund = (function(){
 
 	return {
 
-		activate: activate,
-		deactivate: deactivate,
-		disableBlur: disableBlur,
-		show: show,
-		hide: hide
+		activate,
+		deactivate,
+		disableBlur,
+		show,
+		hide
 
 	}
 
